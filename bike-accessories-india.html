@@ -1,0 +1,1317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bike Accessories India – Premium Spare Parts</title>
+<link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&family=Barlow:wght@300;400;500;600;700;900&family=Barlow+Condensed:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --red: #D0181A;
+    --red-dark: #9A0F11;
+    --red-glow: #FF2225;
+    --chrome: #C8C8C8;
+    --chrome-light: #E8E8E8;
+    --chrome-dark: #888888;
+    --black: #0A0A0A;
+    --dark: #111111;
+    --dark2: #1A1A1A;
+    --dark3: #222222;
+    --dark4: #2D2D2D;
+    --text: #E8E8E8;
+    --text-muted: #999999;
+    --border: rgba(200,200,200,0.12);
+    --border-red: rgba(208,24,26,0.4);
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Barlow', sans-serif;
+    background: var(--black);
+    color: var(--text);
+    overflow-x: hidden;
+    line-height: 1.5;
+  }
+
+  /* ── NAV ── */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    background: rgba(10,10,10,0.92);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border);
+    height: 72px;
+    overflow: hidden;
+    display: flex; align-items: center;
+  }
+
+  .nav-logo-icon{width:120px;height:70px;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:20px;flex-shrink:0}
+  .nav-inner {
+    width: 100%; max-width: 1320px; margin: 0 auto;
+    padding: 0 2rem;
+    display: flex; align-items: center; gap: 2rem;
+  }
+  .nav-logo {
+    display: flex; align-items: center; gap: 12px;
+    text-decoration: none; flex-shrink: 0;
+  }
+  .nav-logo img { height: 48px; width: 48px; object-fit: contain; }
+  .nav-logo-text {
+    font-family: 'Barlow Condensed', sans-serif;
+    line-height: 1;
+  }
+  .nav-logo-text .line1 {
+    font-size: 22px; font-weight: 900; letter-spacing: 1px;
+    color: var(--chrome-light);
+  }
+  .nav-logo-text .line2 {
+    font-size: 11px; font-weight: 600; letter-spacing: 3px;
+    color: var(--red); text-transform: uppercase;
+  }
+
+  .nav-links {
+    display: flex; gap: 2rem; list-style: none;
+    margin-left: auto;
+  }
+  .nav-links a {
+    font-size: 13px; font-weight: 600; letter-spacing: 1.5px;
+    text-transform: uppercase; color: var(--text-muted);
+    text-decoration: none; transition: color 0.2s;
+  }
+  .nav-links a:hover { color: var(--chrome-light); }
+  .nav-links a.active { color: var(--red); }
+
+  .nav-actions { display: flex; align-items: center; gap: 12px; margin-left: 2rem; }
+  .nav-search {
+    display: flex; align-items: center; gap: 8px;
+    background: var(--dark3); border: 1px solid var(--border);
+    border-radius: 6px; padding: 0 12px; height: 38px;
+  }
+  .nav-search input {
+    background: none; border: none; outline: none;
+    color: var(--text); font-family: 'Barlow', sans-serif;
+    font-size: 13px; width: 160px;
+  }
+  .nav-search input::placeholder { color: var(--text-muted); }
+  .nav-search svg { color: var(--text-muted); flex-shrink: 0; }
+
+  .btn-cart {
+    position: relative;
+    background: var(--dark3); border: 1px solid var(--border);
+    border-radius: 6px; width: 38px; height: 38px;
+    display: flex; align-items: center; justify-content: center;
+    cursor: pointer; text-decoration: none; color: var(--chrome-light);
+    transition: border-color 0.2s;
+  }
+  .btn-cart:hover { border-color: var(--red); }
+  .cart-badge {
+    position: absolute; top: -6px; right: -6px;
+    background: var(--red); color: white;
+    font-size: 10px; font-weight: 700;
+    width: 18px; height: 18px; border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+  }
+
+  .btn-primary {
+    background: var(--red); color: white; border: none;
+    padding: 0 20px; height: 38px; border-radius: 6px;
+    font-family: 'Barlow', sans-serif; font-weight: 700;
+    font-size: 13px; letter-spacing: 1px; text-transform: uppercase;
+    cursor: pointer; text-decoration: none;
+    display: inline-flex; align-items: center; gap: 6px;
+    transition: background 0.2s;
+    white-space: nowrap;
+  }
+  .btn-primary:hover { background: var(--red-dark); }
+
+  /* ── HERO ── */
+  .hero {
+    min-height: 100vh;
+    position: relative;
+    display: flex; align-items: center;
+    overflow: hidden;
+    padding-top: 72px;
+  }
+
+  .hero-bg {
+    position: absolute; inset: 0;
+    background:
+      radial-gradient(ellipse 60% 70% at 70% 50%, rgba(208,24,26,0.12) 0%, transparent 60%),
+      radial-gradient(ellipse 40% 50% at 30% 80%, rgba(200,200,200,0.04) 0%, transparent 50%),
+      var(--black);
+  }
+
+  /* Diagonal stripe texture */
+  .hero-bg::after {
+    content: '';
+    position: absolute; inset: 0;
+    background-image: repeating-linear-gradient(
+      -55deg,
+      transparent 0px, transparent 40px,
+      rgba(255,255,255,0.012) 40px, rgba(255,255,255,0.012) 41px
+    );
+  }
+
+  .hero-inner {
+    width: 100%; max-width: 1320px; margin: 0 auto;
+    padding: 4rem 2rem;
+    display: grid; grid-template-columns: 1fr 1fr;
+    gap: 4rem; align-items: center;
+    position: relative; z-index: 1;
+  }
+
+  .hero-eyebrow {
+    display: inline-flex; align-items: center; gap: 10px;
+    font-size: 11px; font-weight: 700; letter-spacing: 3px;
+    text-transform: uppercase; color: var(--red);
+    margin-bottom: 1.5rem;
+  }
+  .hero-eyebrow::before, .hero-eyebrow::after {
+    content: ''; display: block; height: 1px; width: 32px;
+    background: var(--red);
+  }
+
+  .hero-title {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 82px; font-weight: 900; line-height: 0.92;
+    letter-spacing: -1px;
+    margin-bottom: 1.5rem;
+  }
+  .hero-title .line-chrome {
+    display: block;
+    color: transparent;
+    -webkit-text-stroke: 1.5px var(--chrome);
+    text-stroke: 1.5px var(--chrome);
+  }
+  .hero-title .line-red {
+    display: block; color: var(--red);
+  }
+  .hero-title .line-white {
+    display: block; color: var(--chrome-light);
+  }
+
+  .hero-desc {
+    font-size: 16px; color: var(--text-muted);
+    max-width: 480px; line-height: 1.7;
+    margin-bottom: 2.5rem;
+  }
+
+  .hero-ctas {
+    display: flex; align-items: center; gap: 16px; flex-wrap: wrap;
+    margin-bottom: 3rem;
+  }
+
+  .btn-outline {
+    border: 1.5px solid var(--border); color: var(--chrome-light);
+    padding: 0 20px; height: 48px; border-radius: 6px;
+    font-family: 'Barlow', sans-serif; font-weight: 700;
+    font-size: 13px; letter-spacing: 1px; text-transform: uppercase;
+    cursor: pointer; text-decoration: none;
+    display: inline-flex; align-items: center; gap: 6px;
+    transition: border-color 0.2s, color 0.2s;
+    background: transparent;
+  }
+  .btn-outline:hover { border-color: var(--chrome); color: white; }
+
+  .btn-hero {
+    height: 52px; padding: 0 32px; font-size: 15px;
+    border-radius: 4px;
+  }
+
+  .hero-stats {
+    display: flex; gap: 2.5rem;
+  }
+  .hero-stat .num {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 36px; font-weight: 900; color: var(--chrome-light);
+    line-height: 1;
+  }
+  .hero-stat .num span { color: var(--red); }
+  .hero-stat .label {
+    font-size: 12px; color: var(--text-muted);
+    font-weight: 500; letter-spacing: 1px;
+    text-transform: uppercase; margin-top: 4px;
+  }
+
+  /* Hero visual */
+  .hero-visual {
+    position: relative;
+    display: flex; align-items: center; justify-content: center;
+  }
+
+  .hero-ring {
+    position: relative;
+    width: 520px; height: 520px;
+    flex-shrink: 0;
+  }
+  .hero-ring-outer {
+    position: absolute; inset: 0;
+    border-radius: 50%;
+    border: 1px solid rgba(208,24,26,0.25);
+    animation: spin 20s linear infinite;
+  }
+  .hero-ring-outer::before {
+    content: ''; position: absolute;
+    top: -3px; left: 50%; transform: translateX(-50%);
+    width: 6px; height: 6px; border-radius: 50%;
+    background: var(--red);
+  }
+  .hero-ring-inner {
+    position: absolute; inset: 40px;
+    border-radius: 50%;
+    border: 1px solid rgba(200,200,200,0.1);
+    animation: spin 15s linear infinite reverse;
+  }
+  .hero-ring-inner::before {
+    content: ''; position: absolute;
+    top: -3px; left: 50%; transform: translateX(-50%);
+    width: 4px; height: 4px; border-radius: 50%;
+    background: var(--chrome);
+  }
+  @keyframes spin { to { transform: rotate(360deg); } }
+
+  .hero-center-glow {
+    position: absolute; inset: 80px;
+    border-radius: 50%;
+    background: radial-gradient(ellipse at center, rgba(208,24,26,0.15) 0%, transparent 70%);
+  }
+
+  .hero-center-img {
+    position: absolute; inset: 60px;
+    display: flex; align-items: center; justify-content: center;
+  }
+  .hero-center-img img {
+    width: 320px; height: 320px; object-fit: contain;
+    filter: drop-shadow(0 0 40px rgba(208,24,26,0.4));
+    animation: float 4s ease-in-out infinite;
+  }
+  @keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-12px); }
+  }
+
+  /* Floating part badges */
+  .part-badge {
+    position: absolute;
+    background: var(--dark2);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 10px 14px;
+    display: flex; align-items: center; gap: 10px;
+    font-size: 13px;
+  }
+  .part-badge .pb-icon {
+    width: 36px; height: 36px;
+    background: var(--dark3);
+    border-radius: 6px; border: 1px solid var(--border-red);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 20px;
+  }
+  .part-badge .pb-name { font-weight: 600; color: var(--chrome-light); font-size: 12px; }
+  .part-badge .pb-price { color: var(--red); font-weight: 700; font-size: 13px; }
+  .pb-1 { top: 10%; left: -20px; }
+  .pb-2 { bottom: 15%; left: 0; }
+  .pb-3 { top: 20%; right: -20px; }
+  .pb-4 { bottom: 10%; right: -10px; }
+
+  /* ── MARQUEE ── */
+  .marquee-bar {
+    background: var(--red-dark);
+    border-top: 1px solid var(--red); border-bottom: 1px solid var(--red);
+    padding: 10px 0; overflow: hidden;
+  }
+  .marquee-track {
+    display: flex; gap: 0;
+    animation: marquee 20s linear infinite;
+    width: max-content;
+  }
+  @keyframes marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+  .marquee-item {
+    display: flex; align-items: center; gap: 10px;
+    padding: 0 24px;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 14px; font-weight: 700; letter-spacing: 2px;
+    text-transform: uppercase; color: rgba(255,255,255,0.9);
+    white-space: nowrap;
+  }
+  .marquee-dot {
+    width: 5px; height: 5px; border-radius: 50%;
+    background: rgba(255,255,255,0.5); flex-shrink: 0;
+  }
+
+  /* ── CATEGORIES ── */
+  .section {
+    padding: 6rem 0;
+  }
+  .container {
+    max-width: 1320px; margin: 0 auto; padding: 0 2rem;
+  }
+
+  .section-header {
+    display: flex; align-items: flex-end; justify-content: space-between;
+    margin-bottom: 3rem;
+  }
+  .section-eyebrow {
+    font-size: 11px; font-weight: 700; letter-spacing: 3px;
+    text-transform: uppercase; color: var(--red);
+    margin-bottom: 8px;
+  }
+  .section-title {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 48px; font-weight: 900; line-height: 1;
+    color: var(--chrome-light);
+  }
+  .section-title em {
+    font-style: normal; color: var(--red);
+  }
+  .view-all {
+    font-size: 13px; font-weight: 700; letter-spacing: 1.5px;
+    text-transform: uppercase; color: var(--red);
+    text-decoration: none;
+    display: flex; align-items: center; gap: 6px;
+    transition: gap 0.2s;
+  }
+  .view-all:hover { gap: 10px; }
+  .view-all::after { content: '→'; }
+
+  .categories-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+  }
+  .cat-card {
+    background: var(--dark2);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 1.75rem 1.5rem;
+    cursor: pointer; text-decoration: none;
+    display: flex; flex-direction: column;
+    position: relative; overflow: hidden;
+    transition: border-color 0.25s, transform 0.25s;
+    group: true;
+  }
+  .cat-card::before {
+    content: ''; position: absolute;
+    bottom: 0; left: 0; right: 0; height: 3px;
+    background: var(--red);
+    transform: scaleX(0); transform-origin: left;
+    transition: transform 0.3s;
+  }
+  .cat-card:hover { border-color: rgba(208,24,26,0.5); transform: translateY(-4px); }
+  .cat-card:hover::before { transform: scaleX(1); }
+
+  .cat-icon {
+    font-size: 48px; margin-bottom: 1rem;
+    filter: grayscale(0.3);
+  }
+  .cat-name {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 22px; font-weight: 800;
+    color: var(--chrome-light); margin-bottom: 4px;
+  }
+  .cat-count {
+    font-size: 13px; color: var(--text-muted);
+    font-weight: 500;
+  }
+  .cat-arrow {
+    position: absolute; top: 1.5rem; right: 1.5rem;
+    font-size: 20px; color: var(--border);
+    transition: color 0.2s, transform 0.2s;
+  }
+  .cat-card:hover .cat-arrow { color: var(--red); transform: translate(3px, -3px); }
+
+  .cat-card.featured {
+    background: linear-gradient(135deg, var(--red-dark) 0%, #5A0A0B 100%);
+    border-color: var(--red);
+    grid-row: span 2;
+  }
+  .cat-card.featured .cat-name { font-size: 32px; }
+  .cat-card.featured .cat-count { color: rgba(255,255,255,0.6); }
+  .cat-card.featured .cat-icon { font-size: 72px; }
+
+  /* ── PRODUCTS ── */
+  .products-section { background: var(--dark); }
+
+  .products-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+  }
+
+  .product-card {
+    background: var(--dark2);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    overflow: hidden;
+    cursor: pointer;
+    text-decoration: none;
+    display: flex; flex-direction: column;
+    transition: border-color 0.25s, transform 0.2s;
+  }
+  .product-card:hover { border-color: rgba(208,24,26,0.5); transform: translateY(-4px); }
+
+  .product-img {
+    background: var(--dark3);
+    height: 200px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 72px;
+    position: relative; overflow: hidden;
+    border-bottom: 1px solid var(--border);
+  }
+  .product-img::after {
+    content: ''; position: absolute; inset: 0;
+    background: radial-gradient(ellipse at center, rgba(208,24,26,0.08) 0%, transparent 70%);
+  }
+  .product-badge {
+    position: absolute; top: 12px; left: 12px;
+    background: var(--red); color: white;
+    font-size: 10px; font-weight: 800; letter-spacing: 1.5px;
+    text-transform: uppercase; padding: 4px 10px;
+    border-radius: 4px;
+  }
+  .product-badge.new { background: #1A7A3A; }
+  .product-badge.hot { background: var(--red); }
+
+  .product-info { padding: 1.25rem; flex: 1; display: flex; flex-direction: column; }
+  .product-brand {
+    font-size: 10px; font-weight: 700; letter-spacing: 2px;
+    text-transform: uppercase; color: var(--red);
+    margin-bottom: 6px;
+  }
+  .product-name {
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 17px; font-weight: 700;
+    color: var(--chrome-light); margin-bottom: 8px; line-height: 1.3;
+  }
+  .product-compat {
+    font-size: 12px; color: var(--text-muted);
+    margin-bottom: 12px;
+  }
+
+  .product-footer {
+    display: flex; align-items: center; justify-content: space-between;
+    margin-top: auto; padding-top: 12px;
+    border-top: 1px solid var(--border);
+  }
+  .product-price {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 24px; font-weight: 900;
+    color: var(--chrome-light);
+  }
+  .product-price .original {
+    font-size: 14px; color: var(--text-muted);
+    text-decoration: line-through; font-weight: 400;
+    display: block; line-height: 1; margin-bottom: 2px;
+    font-family: 'Barlow', sans-serif;
+  }
+  .add-btn {
+    width: 36px; height: 36px; border-radius: 6px;
+    background: var(--red); border: none;
+    display: flex; align-items: center; justify-content: center;
+    cursor: pointer; color: white; font-size: 20px; font-weight: 300;
+    transition: background 0.2s;
+  }
+  .add-btn:hover { background: var(--red-dark); }
+
+  /* ── BRANDS ── */
+  .brands-section { background: var(--black); }
+  .brands-strip {
+    display: flex; gap: 0;
+    border: 1px solid var(--border);
+    border-radius: 12px; overflow: hidden;
+  }
+  .brand-item {
+    flex: 1;
+    padding: 2rem 1.5rem;
+    display: flex; align-items: center; justify-content: center;
+    border-right: 1px solid var(--border);
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 20px; font-weight: 800;
+    color: var(--text-muted); letter-spacing: 2px;
+    text-transform: uppercase;
+    transition: color 0.2s, background 0.2s;
+    cursor: pointer;
+  }
+  .brand-item:last-child { border-right: none; }
+  .brand-item:hover { color: var(--chrome-light); background: var(--dark2); }
+
+  /* ── FEATURES ── */
+  .features-section { background: var(--dark); }
+  .features-grid {
+    display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px;
+    border: 1px solid var(--border); border-radius: 12px; overflow: hidden;
+  }
+  .feature-item {
+    background: var(--dark2);
+    padding: 2.5rem 2rem;
+    border-right: 1px solid var(--border);
+  }
+  .feature-item:last-child { border-right: none; }
+  .feature-icon {
+    font-size: 36px; margin-bottom: 1rem;
+    display: block;
+  }
+  .feature-title {
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 18px; font-weight: 700;
+    color: var(--chrome-light); margin-bottom: 8px;
+  }
+  .feature-desc { font-size: 13px; color: var(--text-muted); line-height: 1.6; }
+
+  /* ── DEALS ── */
+  .deal-banner {
+    background: var(--dark2);
+    border: 1px solid var(--border-red);
+    border-radius: 16px;
+    padding: 4rem;
+    display: flex; align-items: center; justify-content: space-between; gap: 3rem;
+    position: relative; overflow: hidden;
+  }
+  .deal-banner::before {
+    content: '';
+    position: absolute; top: -80px; right: 15%;
+    width: 300px; height: 300px;
+    border-radius: 50%;
+    background: radial-gradient(ellipse at center, rgba(208,24,26,0.2) 0%, transparent 70%);
+    pointer-events: none;
+  }
+  .deal-tag {
+    display: inline-block;
+    background: var(--red); color: white;
+    font-size: 11px; font-weight: 800; letter-spacing: 3px;
+    text-transform: uppercase; padding: 5px 14px; border-radius: 4px;
+    margin-bottom: 1rem;
+  }
+  .deal-title {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 52px; font-weight: 900; line-height: 1;
+    color: var(--chrome-light); margin-bottom: 0.5rem;
+  }
+  .deal-desc { font-size: 15px; color: var(--text-muted); max-width: 400px; }
+
+  .deal-timer {
+    display: flex; gap: 12px;
+    flex-shrink: 0;
+  }
+  .timer-block {
+    text-align: center;
+    background: var(--dark3); border: 1px solid var(--border);
+    border-radius: 8px; padding: 16px 20px;
+    min-width: 72px;
+  }
+  .timer-num {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 42px; font-weight: 900;
+    color: var(--red); line-height: 1; display: block;
+  }
+  .timer-label {
+    font-size: 10px; font-weight: 700; letter-spacing: 2px;
+    text-transform: uppercase; color: var(--text-muted); margin-top: 4px;
+  }
+  .timer-sep {
+    font-size: 36px; font-weight: 900; color: var(--red);
+    display: flex; align-items: center; padding-top: 4px;
+  }
+
+  /* ── TESTIMONIALS ── */
+  .testimonials-section { background: var(--black); }
+  .testimonials-grid {
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px;
+  }
+  .testimonial-card {
+    background: var(--dark2); border: 1px solid var(--border);
+    border-radius: 12px; padding: 2rem;
+  }
+  .stars { color: #F5A623; font-size: 14px; margin-bottom: 1rem; }
+  .testimonial-text {
+    font-size: 14px; color: var(--text); line-height: 1.7;
+    font-style: italic; margin-bottom: 1.5rem;
+  }
+  .testimonial-author {
+    display: flex; align-items: center; gap: 12px;
+  }
+  .author-avatar {
+    width: 40px; height: 40px; border-radius: 50%;
+    background: var(--dark3); border: 2px solid var(--border-red);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 16px;
+  }
+  .author-name { font-weight: 700; font-size: 14px; color: var(--chrome-light); }
+  .author-bike { font-size: 12px; color: var(--text-muted); }
+
+  /* ── NEWSLETTER ── */
+  .newsletter-section {
+    background: linear-gradient(135deg, var(--red-dark) 0%, #3D0607 50%, var(--dark) 100%);
+    padding: 5rem 0;
+  }
+  .newsletter-inner {
+    max-width: 640px; margin: 0 auto; text-align: center; padding: 0 2rem;
+  }
+  .newsletter-title {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 52px; font-weight: 900; color: white; margin-bottom: 1rem;
+  }
+  .newsletter-desc { color: rgba(255,255,255,0.7); margin-bottom: 2rem; font-size: 15px; }
+  .newsletter-form {
+    display: flex; gap: 12px;
+  }
+  .newsletter-input {
+    flex: 1; background: rgba(0,0,0,0.4);
+    border: 1px solid rgba(255,255,255,0.2); border-radius: 6px;
+    padding: 0 16px; height: 52px;
+    color: white; font-family: 'Barlow', sans-serif; font-size: 15px;
+    outline: none;
+  }
+  .newsletter-input::placeholder { color: rgba(255,255,255,0.4); }
+  .newsletter-input:focus { border-color: rgba(255,255,255,0.5); }
+  .btn-newsletter {
+    background: white; color: var(--red-dark);
+    border: none; padding: 0 28px; height: 52px;
+    border-radius: 6px; font-family: 'Barlow', sans-serif;
+    font-weight: 800; font-size: 14px; letter-spacing: 1px;
+    text-transform: uppercase; cursor: pointer;
+    transition: background 0.2s;
+    white-space: nowrap;
+  }
+  .btn-newsletter:hover { background: var(--chrome-light); }
+
+  /* ── FOOTER ── */
+  footer {
+    background: var(--dark);
+    border-top: 1px solid var(--border);
+    padding: 4rem 0 2rem;
+  }
+  .footer-grid {
+    display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 3rem;
+    margin-bottom: 3rem;
+  }
+  .footer-logo { margin-bottom: 1rem; font-size: 22px; font-weight: 900; color: var(--chrome-light); }
+  .footer-logo span { color: var(--red); }
+  .footer-desc { font-size: 14px; color: var(--text-muted); line-height: 1.7; max-width: 280px; margin-bottom: 1.5rem; }
+  .social-links { display: flex; gap: 10px; }
+  .social-btn {
+    width: 38px; height: 38px; border-radius: 6px;
+    background: var(--dark3); border: 1px solid var(--border);
+    display: flex; align-items: center; justify-content: center;
+    text-decoration: none; font-size: 16px;
+    transition: border-color 0.2s;
+  }
+  .social-btn:hover { border-color: var(--red); }
+
+  .footer-heading {
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 16px; font-weight: 700;
+    color: var(--chrome-light); margin-bottom: 1.25rem;
+    text-transform: uppercase; letter-spacing: 1px;
+  }
+  .footer-links { list-style: none; display: flex; flex-direction: column; gap: 8px; }
+  .footer-links a {
+    font-size: 14px; color: var(--text-muted);
+    text-decoration: none; transition: color 0.2s;
+  }
+  .footer-links a:hover { color: var(--chrome-light); }
+
+  .footer-bottom {
+    border-top: 1px solid var(--border);
+    padding-top: 2rem;
+    display: flex; align-items: center; justify-content: space-between;
+    font-size: 13px; color: var(--text-muted);
+  }
+
+  /* ── Responsive ── */
+  @media (max-width: 1024px) {
+    .hero-title { font-size: 60px; }
+    .hero-inner { grid-template-columns: 1fr; }
+    .hero-visual { display: none; }
+    .products-grid, .categories-grid { grid-template-columns: repeat(2, 1fr); }
+    .features-grid { grid-template-columns: repeat(2, 1fr); }
+    .footer-grid { grid-template-columns: 1fr 1fr; }
+    .testimonials-grid { grid-template-columns: 1fr; }
+  }
+
+  @media (max-width: 640px) {
+    .hero-title { font-size: 44px; }
+    .products-grid { grid-template-columns: 1fr; }
+    .nav-links { display: none; }
+    .deal-banner { flex-direction: column; }
+    .newsletter-form { flex-direction: column; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-inner">
+    <a href="#" class="nav-logo">
+      <img src="logo_black.png" alt="" class="nav-logo-icon">
+    </a>
+    <ul class="nav-links">
+      <li><a href="#" class="active">Home</a></li>
+      <li><a href="#">Parts</a></li>
+      <li><a href="#">Accessories</a></li>
+      <li><a href="#">Brands</a></li>
+      <li><a href="#">Deals</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+    <div class="nav-actions">
+      <div class="nav-search">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+        <input type="text" placeholder="Search parts, model, brand...">
+      </div>
+      <a class="btn-cart" href="#">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+        <span class="cart-badge">3</span>
+      </a>
+      <a class="btn-primary" href="#">Sign In</a>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-inner">
+    <div class="hero-content">
+      <div class="hero-eyebrow">India's Premier Bike Parts Store</div>
+      <h1 class="hero-title">
+        <span class="line-chrome">GENUINE</span>
+        <span class="line-red">SPARE</span>
+        <span class="line-white">PARTS</span>
+      </h1>
+      <p class="hero-desc">
+        Over 50,000 OEM and aftermarket parts for every bike and scooter on Indian roads. Petrol tanks, speedometers, brake systems, engine parts — sourced from trusted manufacturers and delivered fast.
+      </p>
+      <div class="hero-ctas">
+        <a href="#" class="btn-primary btn-hero">
+          Shop All Parts
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14m-7-7 7 7-7 7"/></svg>
+        </a>
+        <a href="#" class="btn-outline" style="height:52px;padding:0 24px;font-size:14px;">
+          Find by Vehicle
+        </a>
+      </div>
+      <div class="hero-stats">
+        <div class="hero-stat">
+          <div class="num">50<span>K+</span></div>
+          <div class="label">Parts in Stock</div>
+        </div>
+        <div class="hero-stat">
+          <div class="num">2.8<span>L+</span></div>
+          <div class="label">Happy Customers</div>
+        </div>
+        <div class="hero-stat">
+          <div class="num">800<span>+</span></div>
+          <div class="label">Bike Models</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-visual">
+      <div class="hero-ring">
+        <div class="hero-ring-outer"></div>
+        <div class="hero-ring-inner"></div>
+        <div class="hero-center-glow"></div>
+        <div class="hero-center-img">
+          <!-- Using text emoji as placeholder since logo is available -->
+          <div style="font-size:200px;filter:drop-shadow(0 0 40px rgba(208,24,26,0.5));animation:float 4s ease-in-out infinite">🏍️</div>
+        </div>
+
+        <div class="part-badge pb-1">
+          <div class="pb-icon">⛽</div>
+          <div>
+            <div class="pb-name">Petrol Tank</div>
+            <div class="pb-price">₹3,499</div>
+          </div>
+        </div>
+        <div class="part-badge pb-2">
+          <div class="pb-icon">🔧</div>
+          <div>
+            <div class="pb-name">Engine Parts</div>
+            <div class="pb-price">₹1,299</div>
+          </div>
+        </div>
+        <div class="part-badge pb-3">
+          <div class="pb-icon">🎯</div>
+          <div>
+            <div class="pb-name">Speedometer</div>
+            <div class="pb-price">₹2,199</div>
+          </div>
+        </div>
+        <div class="part-badge pb-4">
+          <div class="pb-icon">🛞</div>
+          <div>
+            <div class="pb-name">Brake Disc</div>
+            <div class="pb-price">₹899</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MARQUEE -->
+<div class="marquee-bar">
+  <div class="marquee-track">
+    <!-- Set 1 -->
+    <span class="marquee-item"><span class="marquee-dot"></span>Free Shipping Above ₹999</span>
+    <span class="marquee-item"><span class="marquee-dot"></span>OEM Certified Parts</span>
+    <span class="marquee-item"><span class="marquee-dot"></span>Hero · Bajaj · Honda · TVS · Royal Enfield</span>
+    <span class="marquee-item"><span class="marquee-dot"></span>10,000+ Daily Orders</span>
+    <span class="marquee-item"><span class="marquee-dot"></span>Same Day Dispatch</span>
+    <span class="marquee-item"><span class="marquee-dot"></span>12-Month Warranty on All Parts</span>
+    <span class="marquee-item"><span class="marquee-dot"></span>COD Available</span>
+    <span class="marquee-item"><span class="marquee-dot"></span>Pan-India Delivery</span>
+    <!-- Set 2 (duplicate for seamless loop) -->
+    <span class="marquee-item"><span class="marquee-dot"></span>Free Shipping Above ₹999</span>
+    <span class="marquee-item"><span class="marquee-dot"></span>OEM Certified Parts</span>
+    <span class="marquee-item"><span class="marquee-dot"></span>Hero · Bajaj · Honda · TVS · Royal Enfield</span>
+    <span class="marquee-item"><span class="marquee-dot"></span>10,000+ Daily Orders</span>
+    <span class="marquee-item"><span class="marquee-dot"></span>Same Day Dispatch</span>
+    <span class="marquee-item"><span class="marquee-dot"></span>12-Month Warranty on All Parts</span>
+    <span class="marquee-item"><span class="marquee-dot"></span>COD Available</span>
+    <span class="marquee-item"><span class="marquee-dot"></span>Pan-India Delivery</span>
+  </div>
+</div>
+
+<!-- CATEGORIES -->
+<section class="section" style="background: var(--black);">
+  <div class="container">
+    <div class="section-header">
+      <div>
+        <div class="section-eyebrow">Browse by Category</div>
+        <h2 class="section-title">PARTS FOR <em>EVERY</em> NEED</h2>
+      </div>
+      <a class="view-all" href="#">View All</a>
+    </div>
+    <div class="categories-grid">
+      <a class="cat-card featured" href="#">
+        <div class="cat-icon">⛽</div>
+        <div class="cat-name">Petrol Tanks</div>
+        <div class="cat-count">340+ products · All models</div>
+        <span class="cat-arrow">↗</span>
+      </a>
+      <a class="cat-card" href="#">
+        <div class="cat-icon">🔵</div>
+        <div class="cat-name">Speedometers</div>
+        <div class="cat-count">220+ products</div>
+        <span class="cat-arrow">↗</span>
+      </a>
+      <a class="cat-card" href="#">
+        <div class="cat-icon">🔧</div>
+        <div class="cat-name">Engine Parts</div>
+        <div class="cat-count">1,200+ products</div>
+        <span class="cat-arrow">↗</span>
+      </a>
+      <a class="cat-card" href="#">
+        <div class="cat-icon">💡</div>
+        <div class="cat-name">Lights & Electricals</div>
+        <div class="cat-count">580+ products</div>
+        <span class="cat-arrow">↗</span>
+      </a>
+      <a class="cat-card" href="#">
+        <div class="cat-icon">🛞</div>
+        <div class="cat-name">Brakes & Wheels</div>
+        <div class="cat-count">430+ products</div>
+        <span class="cat-arrow">↗</span>
+      </a>
+      <a class="cat-card" href="#">
+        <div class="cat-icon">🪑</div>
+        <div class="cat-name">Body Panels</div>
+        <div class="cat-count">760+ products</div>
+        <span class="cat-arrow">↗</span>
+      </a>
+      <a class="cat-card" href="#">
+        <div class="cat-icon">🔩</div>
+        <div class="cat-name">Suspension</div>
+        <div class="cat-count">290+ products</div>
+        <span class="cat-arrow">↗</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- PRODUCTS -->
+<section class="section products-section">
+  <div class="container">
+    <div class="section-header">
+      <div>
+        <div class="section-eyebrow">Top Sellers This Week</div>
+        <h2 class="section-title">BEST <em>SELLING</em> PARTS</h2>
+      </div>
+      <a class="view-all" href="#">View All</a>
+    </div>
+    <div class="products-grid">
+      <a class="product-card" href="#">
+        <div class="product-img">
+          ⛽
+          <span class="product-badge hot">HOT</span>
+        </div>
+        <div class="product-info">
+          <div class="product-brand">Hero Genuine</div>
+          <div class="product-name">Splendor Plus Petrol Tank — Black Chrome</div>
+          <div class="product-compat">Fits: Splendor Plus 2018–2024</div>
+          <div class="product-footer">
+            <div class="product-price">
+              <span class="original">₹4,200</span>
+              ₹3,499
+            </div>
+            <button class="add-btn">+</button>
+          </div>
+        </div>
+      </a>
+      <a class="product-card" href="#">
+        <div class="product-img">
+          🎯
+          <span class="product-badge new">NEW</span>
+        </div>
+        <div class="product-info">
+          <div class="product-brand">Bajaj OEM</div>
+          <div class="product-name">Pulsar NS200 Digital Speedometer Cluster</div>
+          <div class="product-compat">Fits: Pulsar NS200 2022–2025</div>
+          <div class="product-footer">
+            <div class="product-price">
+              <span class="original">₹2,800</span>
+              ₹2,199
+            </div>
+            <button class="add-btn">+</button>
+          </div>
+        </div>
+      </a>
+      <a class="product-card" href="#">
+        <div class="product-img">🛞</div>
+        <div class="product-info">
+          <div class="product-brand">TVS Genuine</div>
+          <div class="product-name">Apache RTR 160 Front Disc Brake Assembly</div>
+          <div class="product-compat">Fits: Apache RTR 160/180 2019–2024</div>
+          <div class="product-footer">
+            <div class="product-price">
+              <span class="original">₹1,100</span>
+              ₹899
+            </div>
+            <button class="add-btn">+</button>
+          </div>
+        </div>
+      </a>
+      <a class="product-card" href="#">
+        <div class="product-img">
+          🔩
+          <span class="product-badge hot">SALE</span>
+        </div>
+        <div class="product-info">
+          <div class="product-brand">Honda OEM</div>
+          <div class="product-name">Activa 6G Front Suspension Fork Assembly</div>
+          <div class="product-compat">Fits: Activa 6G 2020–2025</div>
+          <div class="product-footer">
+            <div class="product-price">
+              <span class="original">₹3,600</span>
+              ₹2,749
+            </div>
+            <button class="add-btn">+</button>
+          </div>
+        </div>
+      </a>
+      <a class="product-card" href="#">
+        <div class="product-img">💡</div>
+        <div class="product-info">
+          <div class="product-brand">Royal Enfield</div>
+          <div class="product-name">Bullet 350 LED Headlight Assembly</div>
+          <div class="product-compat">Fits: Bullet 350 Classic 2021–2024</div>
+          <div class="product-footer">
+            <div class="product-price">
+              <span class="original">₹4,500</span>
+              ₹3,899
+            </div>
+            <button class="add-btn">+</button>
+          </div>
+        </div>
+      </a>
+      <a class="product-card" href="#">
+        <div class="product-img">
+          🔧
+          <span class="product-badge new">NEW</span>
+        </div>
+        <div class="product-info">
+          <div class="product-brand">Yamaha OEM</div>
+          <div class="product-name">FZ-S V3 Carburetor Assembly with Jet Kit</div>
+          <div class="product-compat">Fits: FZ-S V3 FI 2019–2024</div>
+          <div class="product-footer">
+            <div class="product-price">
+              <span class="original">₹2,100</span>
+              ₹1,699
+            </div>
+            <button class="add-btn">+</button>
+          </div>
+        </div>
+      </a>
+      <a class="product-card" href="#">
+        <div class="product-img">🪑</div>
+        <div class="product-info">
+          <div class="product-brand">Bajaj OEM</div>
+          <div class="product-name">Dominar 400 Side Panel Set — Matte Black</div>
+          <div class="product-compat">Fits: Dominar 400 2019–2024</div>
+          <div class="product-footer">
+            <div class="product-price">
+              <span class="original">₹2,200</span>
+              ₹1,849
+            </div>
+            <button class="add-btn">+</button>
+          </div>
+        </div>
+      </a>
+      <a class="product-card" href="#">
+        <div class="product-img">
+          ⛽
+        </div>
+        <div class="product-info">
+          <div class="product-brand">Hero Genuine</div>
+          <div class="product-name">Xtreme 160R Fuel Tank Cap with Lock</div>
+          <div class="product-compat">Fits: Xtreme 160R 2020–2024</div>
+          <div class="product-footer">
+            <div class="product-price">
+              <span class="original">₹450</span>
+              ₹369
+            </div>
+            <button class="add-btn">+</button>
+          </div>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- DEAL BANNER -->
+<section class="section" style="background: var(--dark); padding-top:0;">
+  <div class="container">
+    <div class="deal-banner">
+      <div>
+        <span class="deal-tag">⚡ Flash Deal — Ends Soon</span>
+        <div class="deal-title">UP TO 40% OFF<br>ENGINE PARTS</div>
+        <p class="deal-desc" style="margin-top:12px;margin-bottom:2rem;">Genuine piston kits, crankshaft assemblies, valves, and camshaft parts from top OEM suppliers — lowest prices of the season.</p>
+        <a href="#" class="btn-primary btn-hero">Grab the Deal →</a>
+      </div>
+      <div class="deal-timer">
+        <div class="timer-block">
+          <span class="timer-num" id="t-h">08</span>
+          <div class="timer-label">Hours</div>
+        </div>
+        <span class="timer-sep">:</span>
+        <div class="timer-block">
+          <span class="timer-num" id="t-m">47</span>
+          <div class="timer-label">Mins</div>
+        </div>
+        <span class="timer-sep">:</span>
+        <div class="timer-block">
+          <span class="timer-num" id="t-s">33</span>
+          <div class="timer-label">Secs</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BRANDS -->
+<section class="section brands-section">
+  <div class="container">
+    <div class="section-header">
+      <div>
+        <div class="section-eyebrow">Official Partners</div>
+        <h2 class="section-title">TRUSTED <em>BRANDS</em></h2>
+      </div>
+    </div>
+    <div class="brands-strip">
+      <div class="brand-item">HERO</div>
+      <div class="brand-item">BAJAJ</div>
+      <div class="brand-item">HONDA</div>
+      <div class="brand-item">TVS</div>
+      <div class="brand-item">YAMAHA</div>
+      <div class="brand-item">RE</div>
+      <div class="brand-item">SUZUKI</div>
+    </div>
+  </div>
+</section>
+
+<!-- FEATURES -->
+<section class="section features-section">
+  <div class="container">
+    <div class="features-grid">
+      <div class="feature-item">
+        <span class="feature-icon">🚚</span>
+        <div class="feature-title">Pan-India Delivery</div>
+        <p class="feature-desc">Free shipping on orders above ₹999. Same-day dispatch before 2 PM. Delivery in 2–5 working days.</p>
+      </div>
+      <div class="feature-item">
+        <span class="feature-icon">✅</span>
+        <div class="feature-title">OEM Certified Parts</div>
+        <p class="feature-desc">Every part sourced directly from authorised manufacturer channels. Comes with brand warranty and authenticity seal.</p>
+      </div>
+      <div class="feature-item">
+        <span class="feature-icon">🔄</span>
+        <div class="feature-title">Easy 30-Day Returns</div>
+        <p class="feature-desc">Not the right fitment? Return unopened parts within 30 days for a full refund or exchange, no questions asked.</p>
+      </div>
+      <div class="feature-item">
+        <span class="feature-icon">🔒</span>
+        <div class="feature-title">Secure Payments</div>
+        <p class="feature-desc">UPI, Net Banking, Cards, EMI & COD. All transactions encrypted with 256-bit SSL. Your money is safe.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="section testimonials-section">
+  <div class="container">
+    <div class="section-header">
+      <div>
+        <div class="section-eyebrow">Customer Reviews</div>
+        <h2 class="section-title">RIDERS <em>TRUST</em> US</h2>
+      </div>
+      <div style="display:flex;align-items:center;gap:8px;">
+        <span style="font-size:32px;font-weight:900;font-family:'Barlow Condensed',sans-serif;color:var(--chrome-light);">4.8</span>
+        <div>
+          <div style="color:#F5A623;font-size:18px;">★★★★★</div>
+          <div style="font-size:12px;color:var(--text-muted);">Based on 48,000+ reviews</div>
+        </div>
+      </div>
+    </div>
+    <div class="testimonials-grid">
+      <div class="testimonial-card">
+        <div class="stars">★★★★★</div>
+        <p class="testimonial-text">"Got the petrol tank for my Splendor Plus in just 2 days. Perfect fit, OEM quality, and the price was ₹800 less than my local dealer. Will definitely order again."</p>
+        <div class="testimonial-author">
+          <div class="author-avatar">🧑</div>
+          <div>
+            <div class="author-name">Rajesh Kumar</div>
+            <div class="author-bike">Hero Splendor Plus · Delhi</div>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-card">
+        <div class="stars">★★★★★</div>
+        <p class="testimonial-text">"The digital speedometer cluster for my Pulsar NS200 works flawlessly. Installation was easy and the product quality is exactly what you'd expect from an OEM part."</p>
+        <div class="testimonial-author">
+          <div class="author-avatar">🧔</div>
+          <div>
+            <div class="author-name">Arjun Singh</div>
+            <div class="author-bike">Bajaj Pulsar NS200 · Mumbai</div>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-card">
+        <div class="stars">★★★★☆</div>
+        <p class="testimonial-text">"Ordered brake disc assembly for my Apache. Packaging was solid, tracking was great. The return process when I got a wrong size was also surprisingly smooth."</p>
+        <div class="testimonial-author">
+          <div class="author-avatar">👩</div>
+          <div>
+            <div class="author-name">Priya Nair</div>
+            <div class="author-bike">TVS Apache RTR 160 · Bangalore</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- NEWSLETTER -->
+<section class="newsletter-section">
+  <div class="newsletter-inner">
+    <h2 class="newsletter-title">GET EXCLUSIVE DEALS</h2>
+    <p class="newsletter-desc">Subscribe for early access to flash sales, new part arrivals, and model-specific maintenance guides — straight to your inbox.</p>
+    <div class="newsletter-form">
+      <input type="email" class="newsletter-input" placeholder="Enter your email address">
+      <button class="btn-newsletter">Subscribe</button>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-logo">BIKE <span>ACCESSORIES</span> INDIA</div>
+        <p class="footer-desc">India's largest online marketplace for genuine bike and scooter spare parts. Over 50,000 SKUs, 800+ models supported, serving 28 states.</p>
+        <div class="social-links">
+          <a class="social-btn" href="#" aria-label="WhatsApp">📱</a>
+          <a class="social-btn" href="#" aria-label="Instagram">📸</a>
+          <a class="social-btn" href="#" aria-label="YouTube">▶️</a>
+          <a class="social-btn" href="#" aria-label="Facebook">🔵</a>
+        </div>
+      </div>
+      <div>
+        <div class="footer-heading">Quick Links</div>
+        <ul class="footer-links">
+          <li><a href="#">All Categories</a></li>
+          <li><a href="#">Best Sellers</a></li>
+          <li><a href="#">New Arrivals</a></li>
+          <li><a href="#">Flash Deals</a></li>
+          <li><a href="#">Bulk Orders</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-heading">Support</div>
+        <ul class="footer-links">
+          <li><a href="#">Track Order</a></li>
+          <li><a href="#">Returns & Refunds</a></li>
+          <li><a href="#">Fitment Guide</a></li>
+          <li><a href="#">Warranty Claims</a></li>
+          <li><a href="#">Contact Us</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-heading">Contact</div>
+        <ul class="footer-links">
+          <li><a href="#">📞 1800-123-BIKE</a></li>
+          <li><a href="#">✉️ help@bikeaccessories.in</a></li>
+          <li><a href="#">🕐 Mon–Sat, 9AM–7PM</a></li>
+          <li style="margin-top:16px;"><a href="#" style="color:var(--chrome-light);font-size:13px;">WhatsApp Support ↗</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2025 Bike Accessories India. All rights reserved.</span>
+      <div style="display:flex;gap:1.5rem;">
+        <a href="#" style="color:var(--text-muted);text-decoration:none;">Privacy Policy</a>
+        <a href="#" style="color:var(--text-muted);text-decoration:none;">Terms of Service</a>
+        <a href="#" style="color:var(--text-muted);text-decoration:none;">Sitemap</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Live countdown timer
+  let h = 8, m = 47, s = 33;
+  function tick() {
+    s--;
+    if (s < 0) { s = 59; m--; }
+    if (m < 0) { m = 59; h--; }
+    if (h < 0) { h = 0; m = 0; s = 0; }
+    document.getElementById('t-h').textContent = String(h).padStart(2,'0');
+    document.getElementById('t-m').textContent = String(m).padStart(2,'0');
+    document.getElementById('t-s').textContent = String(s).padStart(2,'0');
+  }
+  setInterval(tick, 1000);
+
+  // Subtle scroll-in animations
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.style.opacity = '1';
+        e.target.style.transform = 'translateY(0)';
+      }
+    });
+  }, { threshold: 0.1 });
+
+  document.querySelectorAll('.product-card, .cat-card, .testimonial-card, .feature-item').forEach(el => {
+    el.style.opacity = '0';
+    el.style.transform = 'translateY(24px)';
+    el.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+    observer.observe(el);
+  });
+</script>
+</body>
+</html>
